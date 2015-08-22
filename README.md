@@ -31,3 +31,27 @@ Genial, ahora "magicamente" ya esta creada la sesion en el sistema. (ver otros m
 Para borrar la sesion hacemos
     
     smgr.eliminarSesion();
+
+<h3>Ejemplo Completo:</h3>
+
+	import frd.session.SessionManager;
+	import frd.session.UserSession;
+
+	public class ServletTest extends HttpServlet {
+		private static final long serialVersionUID = 1L;
+
+		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+			HttpSession s = request.getSession();
+			String username = request.getParameter("username");
+			
+			UserSession u = new UserSession(username);
+				u.setNombre("Diego");
+				u.setApellido("Colussi");
+				u.setRol("ADMIN");
+				
+			SessionManager smgr = new SessionManager(s);
+			smgr.crearSesion(u);
+			
+		}
+	}
