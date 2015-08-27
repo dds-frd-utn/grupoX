@@ -25,7 +25,7 @@ public class ServletTest extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter w = response.getWriter(); 
 		
-		w.println("<h1>Servlet : Test</h1>");
+		w.println("<h1>Servlet :     Test</h1>");
 		
 		String username = request.getParameter("username");
 		
