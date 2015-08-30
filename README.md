@@ -32,6 +32,9 @@ Para borrar la sesion hacemos
     
     smgr.eliminarSesion();
 
+<h4>Recordar</h4>
+Que solo podes tener un solo usuario logeado en el sistema desde un mismo navegador. Al crearse una nueva sesion en dicho navegador, va a destruirse la sesion referente al usuario que se haya logeado anteriormente.
+
 <h3>Ejemplo Completo:</h3>
 
 	import frd.session.SessionManager;
