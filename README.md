@@ -55,3 +55,37 @@ Para borrar la sesion hacemos
 			
 		}
 	}
+
+
+<h3>Mas Metodos:</h3>
+
+Definido el manejador de esta forma.
+
+ 	SessionManager smgr = new SessionManager(s);
+
+Se ejecutan los Siguientes Metodos:
+Setea un nuevo Timeout de la sesion.
+
+	smgr.setNewTimeOut(30)
+
+Vuelve al timeout por defecto (900seg = 15 Min).
+
+	smgr.setDefaultTimeOut()	
+
+Especifica que no va a haber timeOut en la sesion.
+
+	smgr.setNoTimeOut()
+
+Devuelve el usuario asociado a la sesion creada. Si la sesion no tiene nada, retornara null.
+	
+	smgr.getCurentUsr()
+
+Elimina la sesion previamente creada.
+
+	smgr.eliminarSesion()
+
+	
+Returna true si el sistema detecta una sesion activa.
+	
+	smgr.isActive()
+
