@@ -13,7 +13,7 @@ Hay que crear un Manejador de sesion. Pasamos como dato la sesion del servlet.
     HttpSession s = request.getSession();
     SessionManager smgr = new SessionManager(s);
 
-el Request es el recuest del servlet... que tiene como parametro obligatorio cuando se lo declara.
+el Request es el request del servlet... que tiene como parametro obligatorio cuando se lo declara.
 
 Tengo que crear un usuario mediante la clase UserSession
 	
@@ -46,9 +46,8 @@ Que solo podes tener un solo usuario logeado en el sistema desde un mismo navega
 		protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 			HttpSession s = request.getSession();
-			String username = request.getParameter("username");
-			
-			UserSession u = new UserSession(username);
+
+			UserSession u = new UserSession("diegomartin010");
 				u.setNombre("Diego");
 				u.setApellido("Colussi");
 				u.setRol("ADMIN");
